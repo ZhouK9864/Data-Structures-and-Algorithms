@@ -15,32 +15,35 @@ public class LinkList<T> {
     private Node<T> head = null;                    //初始化头结点,作为哨兵使用
     private Node<T> tail = null;                    //初始化尾结点，作为哨兵使用
 
-    /**
-     * 插入头结点
-     * @param val
-     */
-    public void addHead(T val){
-        head = new Node<T>(val);
-        if(tail == null){
-            tail = head;                             //若无尾结点，另尾结点与头结点一致
-        }
-    }
-
-    /**
-     * 插入尾结点
-     */
-    public void addTail(T val){
-        tail = new Node<T>(val);
-        head.next = tail;
-    }
+//    /**
+//     * 插入头结点
+//     * @param val
+//     */
+//    public void addHead(T val){
+//        head = new Node<T>(val);
+//        if(tail == null){
+//            tail = head;                             //若无尾结点，另尾结点与头结点一致
+//        }
+//    }
+//
+//    /**
+//     * 插入尾结点
+//     */
+//    public void addTail(T val){
+//        tail = new Node<T>(val);
+//        head.next = tail;
+//    }
 
     /**
      * 实现数据从头插法插入链表
      */
-    public void insert(T val){
+    public void insertHead(T val){
         Node<T> ptrNext;                               //使用头插法，插入一个中间结点
         Node<T> newNode = new Node<>(val);
-        if(head.next != null){
+        if(head == null){
+            head = newNode;
+        }
+        else{
             ptrNext = head.next;
             head.next = newNode;
             newNode.next = ptrNext;
@@ -48,9 +51,30 @@ public class LinkList<T> {
     }
 
     /**
+     * 使用尾插法插入链表
+     */
+    public void insertTail(T val){
+        Node<T> newNode = new Node<>(val);
+        if(head == null){
+            head = newNode;
+            tail = head;
+        }else {
+            Node<T> tmp = head;
+            while(tmp.next != null){
+                tmp = tmp.next;
+            }
+            tmp.next = newNode;
+//            tmp.next.next = tail;
+        }
+    }
+
+    /**
      * 删除链表同一数值的节点
      */
     public void delete(T val){
+        if(head == null){
+            throw new RuntimeException("我都空了，你清空气呢？");
+        }
         Node<T> ptrNode = head;
         while(ptrNode.next != null){
             if(ptrNode.next.val == val){                //判断当前结点的下一节点是否和删除目标值相同，哨兵节点的优势展现出来了
