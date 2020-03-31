@@ -48,7 +48,7 @@ public class LinkList<T> {
     }
 
     /**
-     * 删除链表中节点
+     * 删除链表同一数值的节点
      */
     public void delete(T val){
         Node<T> ptrNode = head;
