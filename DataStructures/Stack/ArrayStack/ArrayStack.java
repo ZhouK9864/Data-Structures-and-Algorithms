@@ -13,7 +13,7 @@ public class ArrayStack<T> {
      * 入栈
      */
     public void push(T val){
-        if(size > MAX_SIZE){
+        if(size >= MAX_SIZE){
             MAX_SIZE = MAX_SIZE * 2;
             T[] newStack = (T[]) new Object[MAX_SIZE];              //实现动态扩容
             stack = newStack;

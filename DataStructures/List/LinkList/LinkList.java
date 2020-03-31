@@ -1,4 +1,4 @@
-package DataStructures.LinkList;
+package DataStructures.List.LinkList;
 
 public class LinkList<T> {
     /**

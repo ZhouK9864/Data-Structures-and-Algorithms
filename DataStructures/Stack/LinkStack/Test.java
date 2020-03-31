@@ -1,6 +1,6 @@
 //package DataStructures.Stack.LinkStack;
 //
-//import DataStructures.LinkList.LinkList;
+//import DataStructures.List.LinkList.LinkList;
 //
 //public class Test {
 //    public static void main(String[] args) {
