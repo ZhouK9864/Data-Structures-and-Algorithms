@@ -1,10 +1,10 @@
-# 数据结构 To:/DataStructures
-## 泛型链表实现 To:/LinkList
+## 数据结构 To:/DataStructures
+### 泛型链表实现 To:/LinkList
    实现功能：
    
             创建头、尾节点作为哨兵
             增(分别使用尾插法与头插法)、删、查
-## 泛型栈实现 To:/Stacak
+### 泛型栈实现 To:/Stacak
 #### 基于数组的栈实现 To:/ArrayStack
    实现功能：
                
@@ -17,8 +17,8 @@
    
             基于链表的栈
             增、删、栈顶元素查询、判空
-#算法 To:/Algorithms
-## 排序 To:/Sort
+## 算法 To:/Algorithms
+### 排序 To:/Sort
 #### 冒泡排序 To:/BubbleSort
 #### 插入排序 To:/InsertionSort
    
